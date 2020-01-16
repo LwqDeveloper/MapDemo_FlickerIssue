@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gtC-vR-vcZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="C0W-qA-u1c">
+            <objects>
+                <navigationController id="gtC-vR-vcZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nRx-tI-AeV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KQR-en-e5w" kind="relationship" relationship="rootViewController" id="8Mk-wX-eu3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SuQ-lt-bfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-538" y="106"/>
+        </scene>
+        <!--苹果地图-->
+        <scene sceneID="mcJ-cU-Qtr">
+            <objects>
+                <viewController id="KQR-en-e5w" customClass="ViewController" customModule="MKMapDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oii-va-7QE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MGb-gT-7iY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MGb-gT-7iY" firstAttribute="leading" secondItem="l2y-Qm-jb7" secondAttribute="leading" id="DpD-5I-RYy"/>
+                            <constraint firstAttribute="bottom" secondItem="MGb-gT-7iY" secondAttribute="bottom" id="XyF-P3-fay"/>
+                            <constraint firstItem="MGb-gT-7iY" firstAttribute="top" secondItem="l2y-Qm-jb7" secondAttribute="top" id="emr-6M-4kE"/>
+                            <constraint firstItem="l2y-Qm-jb7" firstAttribute="trailing" secondItem="MGb-gT-7iY" secondAttribute="trailing" id="vbb-36-Z3n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l2y-Qm-jb7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="苹果地图" id="jFv-Z1-H9m"/>
+                    <connections>
+                        <outlet property="mapView" destination="MGb-gT-7iY" id="5Sq-tR-YUK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iwF-D9-XTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="124"/>
+        </scene>
+    </scenes>
+</document>
